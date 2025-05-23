@@ -1,0 +1,33 @@
+.client-logos-section {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .logos-carousel-container {
+    width: 1150px; /* Adjusted width to fit 5 logos */
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .logos-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Add transition for smooth sliding */
+    /* Remove justify-content for consistent spacing managed by margin */
+  }
+  
+  .client-logo {
+    height: 60px; /* Height adjusted as per user */
+    margin: 50px; /* Consistent margin (10px on all sides) */
+    /* Add grayscale filter to match the image */
+    filter: grayscale(100%);
+    opacity: 0.6; /* Adjust opacity to match the faded look */
+    flex-shrink: 0; /* Prevent logos from shrinking */
+    width: 135px; /* Calculated width to fit 5 logos in a 680px container with 10px margins */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .client-logo.middle {
+    filter: none; /* Remove grayscale */
+    opacity: 1; /* Full opacity */
+    /* Add any other styles for the middle logo */
+  } 
