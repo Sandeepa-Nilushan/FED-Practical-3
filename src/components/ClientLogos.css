@@ -4,7 +4,7 @@
   }
   
   .logos-carousel-container {
-    width: 70%; /* Use percentage for responsiveness */
+    width: 80%; /* Use percentage for responsiveness */
     margin: 20px auto;
     overflow: hidden;
   }
@@ -22,9 +22,10 @@
     filter: grayscale(100%);
     opacity: 0.6; /* Adjust opacity to match the faded look */
     flex-shrink: 0; /* Prevent logos from shrinking */
-    width: 15%; /* Maintain aspect ratio */
+    width: 12%; /* Maintain aspect ratio */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
   }
   
   .client-logo.middle {
@@ -49,4 +50,5 @@
       transform: scale(1.1); /* Slightly less zoom on smaller screens */
       margin: 0 15px; /* Adjusted margin for smaller scale */
     }
-  } 
+  }
+  
