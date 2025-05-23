@@ -165,20 +165,24 @@ const Footer = () => {
           <div>
             Copyright © 2025 All Rights Reserved. Site By <span className="text-yellow-500">Sandeepa®</span>
           </div>
-          <div className="flex items-center space-x-4 mt-4 md:mt-0">
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-600 rounded-full hover:bg-gray-500 transition text-yellow-500"><FaFacebookF /></a>
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-600 rounded-full hover:bg-gray-500 transition text-yellow-500"><FaTwitter /></a>
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-600 rounded-full hover:bg-gray-500 transition text-yellow-500"><FaLinkedinIn /></a> {/* Assuming 'v' is LinkedIn */}
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-600 rounded-full hover:bg-gray-500 transition text-yellow-500"><FaBehance /></a> {/* Assuming 'Be' is Behance */}
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-600 rounded-full hover:bg-gray-500 transition text-yellow-500"><FaDribbble /></a> {/* Assuming '®' is Dribbble or similar */}
-            <div
-              onClick={scrollToTop}
-              className="bg-yellow-500 text-black p-2 rounded-sm cursor-pointer hover:bg-yellow-600 transition flex items-center justify-center w-8 h-8"
-            >
-              ↑
-            </div>
+          <div className="flex space-x-4 mt-4 md:mt-0 text-white">
+            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-gray-300 transition text-white"><FaFacebookF /></a>
+            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-gray-300 transition text-white"><FaTwitter /></a>
+            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-gray-300 transition text-white"><FaLinkedinIn /></a> {/* Assuming 'v' is LinkedIn */}
+            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-gray-300 transition text-white"><FaBehance /></a> {/* Assuming 'Be' is Behance */}
+            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-gray-300 transition text-white"><FaDribbble /></a> {/* Assuming '®' is Dribbble or similar */}
           </div>
         </div>
+
+        {/* Scroll to Top Button */}
+        {isVisible && (
+          <div
+            onClick={scrollToTop}
+            className="fixed bottom-10 right-8 bg-yellow-500 text-white text-3xl font-extrabold p-2 rounded-full cursor-pointer hover:bg-yellow-600 transition flex items-center justify-center w-10 h-10"
+          >
+            ↑
+          </div>
+        )}
 
       </div>
     </footer>
