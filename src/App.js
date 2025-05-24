@@ -3,7 +3,7 @@ import Slider from "./components/Slider";
 // import Welcome from "./components/Welcome";
 import Services from "./components/Services";
 import Stats from "./components/Stats";
-// import Testimonials from "./components/Testimonials";
+import Testimonials from "./components/Testimonials";
 // import WhyChooseUs from "./components/WhyChooseUs";
 import ClientLogos from "./components/ClientLogos";
 import News from "./components/News";
@@ -19,8 +19,8 @@ function App() {
         {/* <Welcome /> */}
         <Services />
         <Stats />
-        {/* <Testimonials />
-        <WhyChooseUs /> */}
+        <Testimonials />
+        {/* <WhyChooseUs /> */}
         <ClientLogos />
         <News />
       </div>
