@@ -22,6 +22,10 @@
   overflow: hidden;
 }
 
+.dark .modal-container {
+  background-color: #2d2d2d;
+}
+
 .modal-left-column {
   width: 40%;
   display: flex;
@@ -29,6 +33,10 @@
   justify-content: center;
   padding: 60px 40px;
   background-color: #f8f9fa;
+}
+
+.dark .modal-left-column {
+  background-color: #1a1a1a;
 }
 
 .modal-right-column {
@@ -62,6 +70,10 @@
   padding-left: 15px;
 }
 
+.dark .modal-label {
+  color: #fff;
+}
+
 .modal-label::before {
   content: '';
   position: absolute;
@@ -77,6 +89,11 @@
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
+  color: #000;
+}
+
+.dark .modal-heading {
+  color: #fff;
 }
 
 .modal-description {
@@ -84,6 +101,10 @@
   color: #555;
   margin-bottom: 30px;
   max-width: 420px;
+}
+
+.dark .modal-description {
+  color: #aaa;
 }
 
 .modal-form-container {
@@ -110,6 +131,10 @@
   color: #333;
 }
 
+.dark .form-group label {
+  color: #fff;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -118,6 +143,16 @@
   border-radius: 4px;
   font-size: 14px;
   transition: border-color 0.3s ease;
+  background-color: #fff;
+  color: #333;
+}
+
+.dark .form-group input,
+.dark .form-group select,
+.dark .form-group textarea {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #fff;
 }
 
 .form-group input:focus,
@@ -162,8 +197,16 @@
   transition: background-color 0.3s ease;
 }
 
+.dark .close-button {
+  color: #aaa;
+}
+
 .close-button:hover {
   background-color: #f0f0f0;
+}
+
+.dark .close-button:hover {
+  background-color: #404040;
 }
 
 /* Scrollbar styling */
@@ -175,11 +218,23 @@
   background: #f1f1f1;
 }
 
+.dark .modal-form-container::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
 .modal-form-container::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 4px;
 }
 
+.dark .modal-form-container::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
 .modal-form-container::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.dark .modal-form-container::-webkit-scrollbar-thumb:hover {
+  background: #666;
 } 

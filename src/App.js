@@ -10,38 +10,43 @@ import ClientLogos from "./components/ClientLogos";
 import News from "./components/News";
 import Footer from "./components/Footer";
 import SignIn from "./components/SignIn";
+import ThemeToggle from "./components/ThemeToggle";
+import { ThemeProvider } from "./context/ThemeContext";
 import './App.css';
 
 // Main layout component with header and footer
 const MainLayout = ({ children }) => (
-  <div className="flex flex-col min-h-screen">
+  <div className="flex flex-col min-h-screen bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text transition-colors duration-200">
     <Header className="flex-none" />
     <div className="flex-grow">
       {children}
     </div>
     <Footer />
+    <ThemeToggle />
   </div>
 );
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={
-          <MainLayout>
-            <Slider />
-            <Welcome />
-            <Services />
-            <Stats />
-            <Testimonials />
-            {/* <WhyChooseUs /> */}
-            <ClientLogos />
-            <News />
-          </MainLayout>
-        } />
-        <Route path="/signin" element={<SignIn />} />
-      </Routes>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={
+            <MainLayout>
+              <Slider />
+              <Welcome />
+              <Services />
+              <Stats />
+              <Testimonials />
+              {/* <WhyChooseUs /> */}
+              <ClientLogos />
+              <News />
+            </MainLayout>
+          } />
+          <Route path="/signin" element={<SignIn />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

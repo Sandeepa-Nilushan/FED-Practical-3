@@ -79,14 +79,14 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-700 text-gray-300 py-6 sm:py-8 md:py-10">
+    <footer className="bg-gray-700 dark:bg-dark-card text-gray-300 py-6 sm:py-8 md:py-10">
       <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 max-w-[1440px]">
         {/* Weekly Newsletter */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 items-center mb-16 sm:mb-24 md:mb-36">
           <div className="md:col-span-2 lg:col-span-2 flex items-center">
             <div>
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">Weekly Newsletter</h3>
-              <p className="text-sm sm:text-base text-gray-400">There are many variations of passages of lorem ipsum available.</p>
+              <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500">There are many variations of passages of lorem ipsum available.</p>
             </div>
           </div>
           <div className="md:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 w-full">
@@ -95,7 +95,7 @@ const Footer = () => {
               placeholder="Enter Your Mail"
               value={emailInput}
               onChange={(e) => setEmailInput(e.target.value)}
-              className="w-full sm:flex-grow px-3 sm:px-4 py-2 sm:py-3 rounded focus:outline-none text-gray-800 text-sm sm:text-base"
+              className="w-full sm:flex-grow px-3 sm:px-4 py-2 sm:py-3 rounded focus:outline-none text-gray-800 dark:text-gray-200 dark:bg-gray-800 text-sm sm:text-base"
             />
             <button
               onClick={handleSubscribeClick}
@@ -112,14 +112,14 @@ const Footer = () => {
           <div>
             <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">About Us</h4>
             <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
-            <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p className="text-sm sm:text-base text-gray-400 flex items-center mb-2 cursor-pointer hover:text-white">
-              <span className="mr-2"><FaPhone className="text-gray-400" /></span>
+            <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500 mb-6 sm:mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500 flex items-center mb-2 cursor-pointer hover:text-white">
+              <span className="mr-2"><FaPhone className="text-gray-400 dark:text-gray-500" /></span>
               <span className="mx-2">|</span>
               <span>(+94) 11 434 7575</span>
             </p>
-            <p className="text-sm sm:text-base text-gray-400 flex items-center cursor-pointer hover:text-white">
-              <span className="mr-2"><FaMapMarkerAlt className="text-gray-400" /></span>
+            <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500 flex items-center cursor-pointer hover:text-white">
+              <span className="mr-2"><FaMapMarkerAlt className="text-gray-400 dark:text-gray-500" /></span>
               <span className="mx-2">|</span>
               <span>42 Lily Ave, Colombo 00600</span>
             </p>
@@ -134,8 +134,8 @@ const Footer = () => {
                 <div className="flex items-start">
                   <span className="mr-3 sm:mr-4 text-yellow-500 mt-1">&gt;</span>
                   <div>
-                    <p className="text-sm sm:text-base text-gray-400 mb-1 sm:mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                    <span className="text-xs sm:text-sm text-gray-500">5 Minutes Ago</span>
+                    <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500 mb-1 sm:mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-600">5 Minutes Ago</span>
                   </div>
                 </div>
               </li>
@@ -143,8 +143,8 @@ const Footer = () => {
                 <div className="flex items-start">
                   <span className="mr-3 sm:mr-4 text-yellow-500 mt-1">&gt;</span>
                   <div>
-                    <p className="text-sm sm:text-base text-gray-400 mb-1 sm:mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                    <span className="text-xs sm:text-sm text-gray-500">5 Minutes Ago</span>
+                    <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500 mb-1 sm:mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-600">5 Minutes Ago</span>
                   </div>
                 </div>
               </li>
@@ -157,24 +157,24 @@ const Footer = () => {
             <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
             <ul className="space-y-1 sm:space-y-2">
               <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Support Forums</span>
+                <span className="mr-2 text-gray-400 dark:text-gray-500"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 dark:text-gray-500 cursor-pointer hover:text-white">Support Forums</span>
               </li>
               <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Communication</span>
+                <span className="mr-2 text-gray-400 dark:text-gray-500"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 dark:text-gray-500 cursor-pointer hover:text-white">Communication</span>
               </li>
               <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">FAQS</span>
+                <span className="mr-2 text-gray-400 dark:text-gray-500"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 dark:text-gray-500 cursor-pointer hover:text-white">FAQS</span>
               </li>
               <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Privacy Policy</span>
+                <span className="mr-2 text-gray-400 dark:text-gray-500"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 dark:text-gray-500 cursor-pointer hover:text-white">Privacy Policy</span>
               </li>
               <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Rules & Condition</span>
+                <span className="mr-2 text-gray-400 dark:text-gray-500"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 dark:text-gray-500 cursor-pointer hover:text-white">Rules & Condition</span>
               </li>
               <li className="flex items-center">
                 <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
