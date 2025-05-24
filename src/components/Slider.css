@@ -1,0 +1,96 @@
+.slider-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 550px;
+  display: flex;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: white;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.logistic-label {
+  color: #f4b504;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.slider-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #f4b504;
+}
+
+.slider-description {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 420px;
+}
+
+.discover-button {
+  background-color: #f4b504;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 40px;
+  width: fit-content;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #000;
+}
+
+.slider-controls span {
+  margin-right: 20px;
+}
+
+.arrows span {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
