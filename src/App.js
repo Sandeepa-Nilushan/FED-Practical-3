@@ -13,7 +13,7 @@ import './App.css';
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Header className="flex-none" />
       <div className="flex-grow">
         <Slider />
         {/* <Welcome /> */}
