@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './SignIn.css';
 
 const SignIn = () => {
@@ -7,6 +7,7 @@ const SignIn = () => {
     email: '',
     password: '',
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +22,7 @@ const SignIn = () => {
     // Handle sign in logic here
     console.log('Form submitted:', formData);
     // After successful sign in, redirect to home
-    window.location.href = '/';
+    navigate('/');
   };
 
   return (

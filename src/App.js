@@ -10,6 +10,7 @@ import ClientLogos from "./components/ClientLogos";
 import News from "./components/News";
 import Footer from "./components/Footer";
 import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 import './App.css';
 
 // Main layout component with header and footer
@@ -40,6 +41,7 @@ function App() {
           </MainLayout>
         } />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );
