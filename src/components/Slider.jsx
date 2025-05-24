@@ -34,27 +34,44 @@ const Slider = () => {
   return (
     <section className="slider-container">
       <div className="slider-wrapper">
-        <img src={currentSlide.image} alt="Slide" className="slider-image" />
+        <div className="left-column">
+          <div className="text-box">
+            <div className="text-content-wrapper">
+              <p className="logistic-label">LOGISTIC</p>
+              <h1 className="slider-heading">
+                {currentSlide.heading} <br />
+                <span className="highlight">{currentSlide.highlight}</span>
+              </h1>
+              <p className="slider-description">
+                Amet, tempus egestas facilisis volutpat viverra molestie lobortis
+                posuere maecenas. molestie lobortis posuere maecenas. Eget sapien,
+                gravida nequi.
+              </p>
+              <button className="discover-button">DISCOVER MORE</button>
+            </div>
 
-        <div className="text-box">
-          <p className="logistic-label">LOGISTIC</p>
-          <h1 className="slider-heading">
-            {currentSlide.heading} <br />
-            <span className="highlight">{currentSlide.highlight}</span>
-          </h1>
-          <p className="slider-description">
-            Amet, tempus egestas facilisis volutpat viverra molestie lobortis
-            posuere maecenas. molestie lobortis posuere maecenas. Eget sapien,
-            gravida nequi.
-          </p>
-          <button className="discover-button">DISCOVER MORE</button>
-
-          <div className="slider-controls">
-            <span>{`${currentIndex + 1} / ${slides.length}`}</span>
             <div className="arrows">
+              <span>{`${currentIndex + 1} / ${slides.length}`}</span>
               <span onClick={prevSlide}>&larr;</span>
               <span onClick={nextSlide}>&rarr;</span>
             </div>
+          </div>
+        </div>
+
+        <div className="right-column">
+          <div className="slider-image-container">
+            {slides.map((slide, index) => (
+              <img
+                key={slide.id}
+                src={slide.image}
+                alt={`Slide ${slide.id}`}
+                className="slider-image"
+                style={{
+                  transform: `translateX(${-currentIndex * 100}%)`,
+                  transition: 'transform 0.5s ease-in-out',
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -8,41 +8,81 @@
 .slider-wrapper {
   position: relative;
   width: 90%;
-  max-width: 1200px;
-  height: 550px;
+  max-width: 1400px;
+  height: 700px;
   display: flex;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.left-column {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.right-column {
+  width: 60%;
+  height: 100%;
+}
+
+.slider-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
 }
 
 .slider-image {
+  flex-shrink: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .text-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
   height: 100%;
-  background: white;
-  padding: 60px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 2;
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.text-content-wrapper {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  height: 600px;
+  transform: translateY(-50%);
+  max-width: 700px;
+  background-color: white;
+  padding: 40px;
+  z-index: 3;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logistic-label {
-  color: #f4b504;
+  color: #000;
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.logistic-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #f4b504;
 }
 
 .slider-heading {
@@ -75,22 +115,33 @@
   width: fit-content;
 }
 
-.slider-controls {
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: #000;
+.discover-button:hover {
+  background-color: #d4a003; /* Darker yellow on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.slider-controls span {
-  margin-right: 20px;
+.arrows {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  z-index: 4;
+  background-color: #f4b504;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.arrows:hover {
+  background-color: #d4a003; /* Darker yellow on hover */
+  cursor: pointer; /* Indicate it's clickable */
 }
 
 .arrows span {
   font-size: 20px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
