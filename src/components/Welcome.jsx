@@ -9,6 +9,9 @@ function Welcome() {
       <div className="welcome-container">
         {/* Left: Images */}
         <div className="welcome-images">
+          <div className="shape triangle"></div>
+          <div className="shape parallelogram"></div>
+
           <img src={mainImage} alt="Main" className="main-img" />
 
           <img src={overlayImage} alt="Overlay" className="overlay-img" />
@@ -21,6 +24,8 @@ function Welcome() {
 
         {/* Right: Text */}
         <div className="welcome-text">
+          <div className="shape text-parallelogram"></div> {/* Now behind */}
+
           <h1>TransMax Logistics<br />Around <span className="highlight">the World</span></h1>
           <p>
             Transmax is the world’s driving worldwide coordinations supplier — we uphold industry
@@ -32,6 +37,7 @@ function Welcome() {
           </p>
           <button>MORE ABOUT US</button>
         </div>
+
       </div>
     </section>
   );
