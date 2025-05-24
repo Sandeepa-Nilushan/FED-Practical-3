@@ -164,11 +164,11 @@
   padding: 15px;
   border-top: 1px solid #eee; /* Separator between header and content when expanded */
   font-size: 14px; /* Match surrounding text size */
-  color: #666; /* Match surrounding text color */
+  color: #eaeaea; /* Match surrounding text color */
 } 
 
 .testimonial-card {
-  background-color: #f8f8f8;
+  background-color: #eaeaea;
   padding: 30px;
   position: relative;
   border-radius: 8px;
@@ -211,10 +211,13 @@
 .speech-tail {
   position: absolute;
   bottom: -20px;
-  left: 40px;
+  right: 40px;
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 20px solid #f8f8f8; /* Match card bg color */
+  border-bottom: 20px solid #eaeaea;
+  border-right: 22px solid transparent;
+  border-left: 0;
+  border-top: 0;
+
+  transform: rotate(90deg); /* Rotates the triangle */
 }
