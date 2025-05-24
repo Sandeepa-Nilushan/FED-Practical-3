@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Slider from "./components/Slider";
-// import Welcome from "./components/Welcome";
+import Welcome from "./components/Welcome";
 import Services from "./components/Services";
 import Stats from "./components/Stats";
 import Testimonials from "./components/Testimonials";
@@ -16,7 +16,7 @@ function App() {
       <Header className="flex-none" />
       <div className="flex-grow">
         <Slider />
-        {/* <Welcome /> */}
+        <Welcome />
         <Services />
         <Stats />
         <Testimonials />
