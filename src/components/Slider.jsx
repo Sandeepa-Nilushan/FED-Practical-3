@@ -29,6 +29,20 @@ const Slider = () => {
     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      const headerOffset = 100; // Adjust this value as needed
+      const elementPosition = servicesSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const currentSlide = slides[currentIndex];
 
   return (
@@ -47,7 +61,7 @@ const Slider = () => {
                 posuere maecenas. molestie lobortis posuere maecenas. Eget sapien,
                 gravida nequi.
               </p>
-              <button className="discover-button">DISCOVER MORE</button>
+              <button className="discover-button" onClick={scrollToServices}>DISCOVER MORE</button>
             </div>
 
             <div className="arrows">
