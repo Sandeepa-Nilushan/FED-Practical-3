@@ -17,8 +17,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 border-b border-gray-200 min-h-[80px] pt-4">
-      <div className="container mx-auto px-8 pb-4 flex items-center max-w-[1400px]">
+    <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 border-b border-gray-200 min-h-[80px]">
+      <div className="container mx-auto px-8 h-[80px] flex items-center max-w-[1400px]">
         {/* Logo */}
         <a href="/" className="flex items-center text-2xl font-bold text-black tracking-wide">
           {/* Placeholder for icon */}
@@ -47,7 +47,8 @@ const Header = () => {
                 PAGES <span className="ml-2 text-xs">▼</span>
               </a>
               {openDropdown === 'pages' && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-20">
+                <div className="absolute top-[calc(100%+1px)] left-0 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-50">
+                  <div className="absolute -top-1 left-0 right-0 h-1"></div>
                   <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
                   <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact Us</a>
                   <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Careers</a>
@@ -75,7 +76,8 @@ const Header = () => {
                 SERVICES <span className="ml-2 text-xs">▼</span>
               </a>
               {openDropdown === 'services' && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-20">
+                <div className="absolute top-[calc(100%+1px)] left-0 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-50">
+                  <div className="absolute -top-1 left-0 right-0 h-1"></div>
                   <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Ocean Freight</a>
                   <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Air Freight</a>
                   <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Land Transport</a>
@@ -95,7 +97,8 @@ const Header = () => {
                 BLOG <span className="ml-2 text-xs">▼</span>
               </a>
               {openDropdown === 'blog' && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-20">
+                <div className="absolute top-[calc(100%+1px)] left-0 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-50">
+                  <div className="absolute -top-1 left-0 right-0 h-1"></div>
                   <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Latest Articles</a>
                   <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Industry News</a>
                   <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Case Studies</a>
