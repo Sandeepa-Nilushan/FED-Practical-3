@@ -2,30 +2,57 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .slider-wrapper {
   position: relative;
-  width: 90%;
+  width: 95%;
   max-width: 1400px;
-  height: 700px;
+  height: auto;
+  min-height: 500px;
   display: flex;
+  flex-direction: column;
   overflow: hidden;
   background-color: #fff;
 }
 
+@media (min-width: 768px) {
+  .slider-wrapper {
+    flex-direction: row;
+    height: 600px;
+  }
+}
+
 .left-column {
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 40px;
+  padding: 30px 20px;
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .left-column {
+    width: 40%;
+    padding: 60px 40px;
+    order: 1;
+  }
 }
 
 .right-column {
-  width: 60%;
-  height: 100%;
+  width: 100%;
+  height: 300px;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .right-column {
+    width: 60%;
+    height: 100%;
+    order: 2;
+  }
 }
 
 .slider-image-container {
@@ -47,32 +74,55 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .text-content-wrapper {
-  position: absolute;
-  left: 10%;
-  top: 50%;
-  height: 600px;
-  transform: translateY(-50%);
-  max-width: 700px;
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+  height: auto;
+  max-width: 100%;
   background-color: white;
-  padding: 40px;
+  padding: 20px;
   z-index: 3;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .text-content-wrapper {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    height: 600px;
+    transform: translateY(-50%);
+    max-width: 700px;
+    padding: 40px;
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
 .logistic-label {
   color: #000;
   font-weight: bold;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 8px;
   position: relative;
   padding-left: 15px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .logistic-label {
+    font-size: 14px;
+  }
 }
 
 .logistic-label::before {
@@ -86,10 +136,19 @@
 }
 
 .slider-heading {
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   line-height: 1.2;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .slider-heading {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
 }
 
 .highlight {
@@ -97,33 +156,49 @@
 }
 
 .slider-description {
-  font-size: 15px;
+  font-size: 14px;
   color: #555;
-  margin-bottom: 30px;
-  max-width: 420px;
+  margin-bottom: 20px;
+  max-width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .slider-description {
+    font-size: 15px;
+    margin-bottom: 30px;
+    max-width: 420px;
+    text-align: left;
+  }
 }
 
 .discover-button {
   background-color: #f4b504;
   color: white;
   border: none;
-  padding: 14px 28px;
-  font-size: 14px;
+  padding: 12px 24px;
+  font-size: 13px;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   width: fit-content;
 }
 
+@media (min-width: 768px) {
+  .discover-button {
+    padding: 14px 28px;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
+
 .discover-button:hover {
-  background-color: #d4a003; /* Darker yellow on hover */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  background-color: #d4a003;
+  transition: background-color 0.3s ease;
 }
 
 .arrows {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
+  position: relative;
   display: flex;
   align-items: center;
   z-index: 4;
@@ -131,17 +206,55 @@
   padding: 8px 12px;
   border-radius: 4px;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
+  margin-top: 20px;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .arrows {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin-top: 0;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .arrows span {
+    font-size: 14px;
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .arrows {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  
+  .arrows span {
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
 }
 
 .arrows:hover {
-  background-color: #d4a003; /* Darker yellow on hover */
-  cursor: pointer; /* Indicate it's clickable */
+  background-color: #d4a003;
+  cursor: pointer;
 }
 
 .arrows span {
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   margin-right: 5px;
   margin-left: 5px;
+}
+
+@media (min-width: 768px) {
+  .arrows span {
+    font-size: 20px;
+  }
 }
