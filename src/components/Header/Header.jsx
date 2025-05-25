@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import QuoteModal from './QuoteModal';
+import QuoteModal from '../Quote_Modal/QuoteModal';
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);

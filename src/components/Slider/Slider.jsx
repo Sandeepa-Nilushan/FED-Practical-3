@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import './Slider.css';
-import sliderImage1 from '../assets/images/austin-distel-rxpThOwuVgE-unsplash.webp';
-import sliderImage2 from '../assets/images/microsoft-365-MFK0JpFU13U-unsplash.webp';
+import image1 from '../../assets/images/austin-distel-rxpThOwuVgE-unsplash.webp';
+import image2 from '../../assets/images/microsoft-365-MFK0JpFU13U-unsplash.webp';
 
 const slides = [
   {
     id: 1,
-    image: sliderImage1,
+    image: image1,
     heading: 'Best Shipping',
     highlight: 'Partner',
   },
   {
     id: 2,
-    image: sliderImage2,
+    image: image2,
     heading: 'Global Logistic',
     highlight: 'Network',
   },
