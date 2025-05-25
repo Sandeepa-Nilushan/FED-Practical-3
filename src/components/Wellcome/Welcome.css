@@ -220,6 +220,7 @@
   line-height: 1.6;
   margin-bottom: 16px;
   position: relative;
+  text-align: justify;
 }
 
 .welcome-text button {
@@ -351,6 +352,10 @@
   .welcome-text {
     width: 100%;
     padding: 0;
+    text-align: center;
+  }
+
+  .welcome-text p {
     text-align: center;
   }
 

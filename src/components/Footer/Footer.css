@@ -479,6 +479,13 @@
 
 .copyright-highlight {
   color: #F59E0B;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.copyright-highlight:hover {
+  color: #D97706;
+  text-decoration: underline;
 }
 
 .social-links {
