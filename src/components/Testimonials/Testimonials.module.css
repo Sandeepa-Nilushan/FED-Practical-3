@@ -5,12 +5,13 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  /* max-width: 1100px; */
+  padding: 0;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -15px;
 }
 
 .col-md-6 {
@@ -220,4 +221,102 @@
   border-top: 0;
 
   transform: rotate(90deg); /* Rotates the triangle */
+}
+
+/* Responsive styles */
+@media (max-width: 1279px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 3rem;
+  }
+  
+  .row {
+    margin: 0;
+    gap: 40px;
+  }
+  
+  .col-md-6 {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .testimonial-card {
+    margin-bottom: 30px;
+  }
+  
+  .quote-area {
+    width: 60px;
+    height: 45px;
+    top: 30px;
+    left: -20px;
+  }
+  
+  .quote-symbol {
+    font-size: 28px;
+  }
+  
+  .testimonial-content {
+    margin-top: 30px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .row {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .row {
+    gap: 25px;
+  }
+  
+  .testimonials-why-choose-us h2 {
+    font-size: 28px;
+  }
+  
+  .testimonial-card {
+    padding: 25px;
+  }
+  
+  .quote-area {
+    width: 50px;
+    height: 40px;
+    top: 25px;
+    left: -15px;
+  }
+  
+  .quote-symbol {
+    font-size: 24px;
+  }
+  
+  .testimonial-content {
+    margin-top: 25px;
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  
+  .testimonial-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .slider-nav {
+    margin-bottom: 10px;
+  }
 }
