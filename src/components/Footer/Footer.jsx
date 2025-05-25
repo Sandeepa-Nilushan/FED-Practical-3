@@ -243,8 +243,10 @@ const Footer = () => {
             value={scrollProgress}
             strokeWidth={10}
             styles={buildStyles({
-              pathColor: `black`,
-              trailColor: `#4B5563`,
+              // pathColor: `#00b0e8`, //Blue 
+              pathColor: `#f97316`, // orange
+              // pathColor: `#16a34a`,  // Green
+              trailColor: `black`,
               backgroundColor: 'transparent',
             })}
           >
